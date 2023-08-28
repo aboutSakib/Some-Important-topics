@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotating Rectangle in Circle</title>
+    <style>
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: lightgray;
+        position: relative;
+        animation: rotate 3s infinite linear;
+        margin: 0 auto;
+        margin-top: 50%;
+      }
+
+      .rectangle {
+        width: 120px;
+        height: 120px;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="rectangle"></div>
+    </div>
+  </body>
+</html>
